@@ -18,12 +18,8 @@ Route::get('/welcome', function () {
     return view('welcome');
 });
 
-//GET, POST, PUT, DELETE
-Route::get('/', function () {
-    return view('home');
-});
 
-Route::get('/home', [HomeController::class, 'index']);
+Route::get('/', [HomeController::class, 'index']);
 
 Route::get('/projects', function () {
     return 'Projects';
